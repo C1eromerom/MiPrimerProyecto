@@ -39,6 +39,18 @@ public class Complejo {
 		return new Complejo (real-c.real , imag-c.imag);
 	}
 	
+	public Complejo multiplicación (Complejo c){
+		return new Complejo (real*c.real - imag*c.imag , real*c.imag+imag*c.real);
+	}
+	
+	public Complejo division (Complejo c){
+		return new Complejo ((real+c.real+imag*c.imag)/(c.real*c.real+c.imag*c.imag),(imag*c.real-real*c.imag)/(c.real*c.real+c.imag+c.imag));
+	}
+	
+	public String toString() {
+        return "(" + real + ", " + imag + ")";
+    }
+	
 	
 }
 
