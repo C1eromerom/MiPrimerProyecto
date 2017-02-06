@@ -1,21 +1,48 @@
 package Rectangulo;
 
+import Ejercicios.Complejo;
+
 public class Rectangulo {
-	private Vertice v1;
-	private Vertice v2;
-	private Vertice v3;
-	private Vertice v4;
+	private Complejo verticeInferiorIzquierdo;
+	private Complejo verticeInferiorDerecho;
+	private Complejo verticeSuperiorIzquierdo;
+	private Complejo verticeSuperiorDerecho;
 	
 	public Rectangulo(){}
 	
-	public Rectangulo(Vertice v1, Vertice v2, Vertice v3, Vertice v4){
-		this.v1=v1;
-		this.v2=v2;
-		this.v3=v3;
-		this.v4=v4;
+	public Rectangulo(Complejo vII, Complejo vID, Complejo vSI, Complejo vSD){
+		this.verticeInferiorIzquierdo = vII;
+		this.verticeInferiorDerecho = vID;
+		this.verticeSuperiorIzquierdo = vSI;
+		this.verticeSuperiorDerecho = vSD;
 	}
 	
-	public Rectangulo(float a, float b){
+	public Rectangulo(int altura, int base){
+		this.verticeInferiorIzquierdo = new Complejo(0,0);
+		this.verticeInferiorDerecho = new Complejo(base,0);
+		this.verticeSuperiorIzquierdo = new Complejo(altura,base);
+		this.verticeSuperiorDerecho = new Complejo(0,altura);
 	}
+	
+	public double area(){
+		return (verticeInferiorDerecho.getReal()-verticeInferiorIzquierdo.getReal())*(verticeSuperiorIzquierdo.getImag()-verticeInferiorIzquierdo.getImag());
+	}
+	public void desplaza (Complejo mover){
+		this.verticeInferiorDerecho=mover.suma(this.verticeInferiorDerecho);
+		this.verticeInferiorIzquierdo=mover.suma(this.verticeInferiorIzquierdo);
+		this.verticeSuperiorDerecho=mover.suma(this.verticeSuperiorDerecho);
+		this.verticeSuperiorIzquierdo=mover.suma(this.verticeSuperiorIzquierdo);
+	}
+	
+	public String toString(){
+		return verticeSuperiorIzquierdo.toString()+" " + verticeSuperiorDerecho.toString()+"\n" + verticeInferiorIzquierdo.toString()+" " + verticeInferiorDerecho.toString();
+		
+	}
+
+	
+	
+	
+	
+
 
 }

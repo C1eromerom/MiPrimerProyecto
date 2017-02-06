@@ -17,7 +17,7 @@ public class testCafetera {
 						+"\n(4)Vaciar la cafetera"
 						+"\n(5)Agregar café a la cafetera"
 						+"\n(6)Rellenar cafetera"
-						+"\n(7)Crear una nuvea cafetera"
+						+"\n(7)Crear una nueva cafetera"
 						+"\n(0)SALIR");
 				
 				System.out.println(cafetera.toString());

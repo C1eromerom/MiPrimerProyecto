@@ -2,12 +2,11 @@ package Ejercicios;
 
 public class Complejo {
 
-	private int imag;
 	private int real;
+	private int imag;
 	
 	public Complejo(){
 	}
-	
 	public Complejo(int imag, int real){
 		this.real=real;
 		this.imag=imag;
