@@ -16,8 +16,6 @@ public class testCafetera {
 						+"\n(3)Llenar la cafetera"
 						+"\n(4)Vaciar la cafetera"
 						+"\n(5)Agregar café a la cafetera"
-						+"\n(6)Rellenar cafetera"
-						+"\n(7)Crear una nueva cafetera"
 						+"\n(0)SALIR");
 				
 				System.out.println(cafetera.toString());
@@ -41,17 +39,6 @@ public class testCafetera {
 					break;
 					case 5:
 						cafetera.agregarCafe(entrada.obtenerEntero("¿Cuanto café quieres agregar?"));
-					break;
-					case 6:
-						cafetera.llenarCafetera();
-					break;
-					case 7:
-						a = entrada.obtenerEntero("¿Quieres crear una cafetera normal(1) o prefieres definir su capacidad(2)?");
-						if(a==1){
-							cafetera = new Cafetera();
-						}else if(a==2){
-							cafetera = new Cafetera((entrada.obtenerEntero("Dime el tamaño máximo de la cafetera:")), (entrada.obtenerEntero("Ahora dime la cantidad de café que contiene actualmente:")));
-						}
 					break;
 					case 0:
 						loop=false;
