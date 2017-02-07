@@ -38,7 +38,7 @@ public class Complejo {
 		return new Complejo (real-c.real , imag-c.imag);
 	}
 	
-	public Complejo multiplicación (Complejo c){
+	public Complejo multiplicacion (Complejo c){
 		return new Complejo (real*c.real - imag*c.imag , real*c.imag+imag*c.real);
 	}
 	

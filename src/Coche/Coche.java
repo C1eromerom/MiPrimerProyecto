@@ -2,15 +2,15 @@ package Coche;
 import miLibreria.Entrada;
 
 public class Coche {
-	private Motor motor;
-	private Rueda rueda1;
-	private Rueda rueda2;
-	private Rueda rueda3;
-	private Rueda rueda4;
-	private Ventana ventana1;
-	private Ventana ventana2;
-	private Puerta puerta1;
-	private Puerta puerta2;
+	private Motor motor=new Motor(false);
+	private Rueda rueda1=new Rueda(false);
+	private Rueda rueda2=new Rueda(false);
+	private Rueda rueda3=new Rueda(false);
+	private Rueda rueda4=new Rueda(false);
+	private Ventana ventana1=new Ventana(false);
+	private Ventana ventana2=new Ventana(false);
+	private Puerta puerta1=new Puerta(false);
+	private Puerta puerta2=new Puerta(false);
 
 	
 	public Motor getMotor() {
@@ -68,52 +68,72 @@ public class Coche {
 		this.puerta2 = puerta2;
 	}
 	
-	public Motor encenderMotor(boolean m){
+	public void cambiarMotor(boolean m){
 		motor.setMotor(m);
-		return motor;
 	}
 	
-	public Rueda inflarRueda(boolean m){
+	public void cambiarRueda(boolean m){
 		
 		Entrada entrada= new Entrada();
 		
-		int r=entrada.obtenerEntero("Dime el número de la rueda");
+		int r=entrada.obtenerEntero("Dime el numero de la rueda");
 		
 		switch (r){
 		
 		case 1:rueda1.setRueda(m);
-				return rueda1;
+		break;
 		case 2:rueda2.setRueda(m);
-				return rueda2;
+		break;
 		case 3:rueda3.setRueda(m);
-				return rueda3;
+		break;
 		case 4:rueda4.setRueda(m);
-				return rueda4;
+		break;
 		}
 	}
 	
-public Ventana abrirVentana(boolean m){
+public void cambiarVentana(boolean m){
 		
 		Entrada entrada= new Entrada();
 		
-		int r=entrada.obtenerEntero("Dime el número de la ventana");
+		int r=entrada.obtenerEntero("Dime el numero de la ventana");
 		
 		switch (r){
 		
-		case 1:ventana1.setventana(m);
-				return rueda1;
-		case 2:rueda2.setRueda(m);
-				return rueda2;
-		case 3:rueda3.setRueda(m);
-				return rueda3;
-		case 4:rueda4.setRueda(m);
-				return rueda4;
+		case 1:ventana1.setVentana(m);
+		break;
+		case 2:ventana2.setVentana(m);
+		break;
+
 		}
 	}
+
+public void cambiarPuerta(boolean m){
 	
+	Entrada entrada= new Entrada();
+	
+	int r=entrada.obtenerEntero("Dime el numero de la puerta");
+	
+	switch (r){
+	
+	case 1:puerta1.setPuerta(m);
+	break;
+	case 2:puerta2.setPuerta(m);
+	break;
 
 	}
+}
+
+public String toString(){
+	return 	"Motor: "+motor+
+			"\n Rueda1: "+rueda1+"\n Rueda2: "+rueda2+"\n Rueda3: "+rueda3+"\n Rueda4: "+rueda4+
+			"\n Ventana1: "+ventana1+"\n Ventana2: "+ventana2+
+			"\n Puerta1: "+puerta1+"\n Puerta2: "+puerta2;
+}
+	
+}
+
+
 	
 	
 
-}
+

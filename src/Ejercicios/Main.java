@@ -17,7 +17,7 @@ public class Main {
 		System.out.println("COMPLEJOS_____________________");
 		System.out.println("Suma= "+c1.suma(c2).toString());
 		System.out.println("Resta= "+c1.resta(c2).toString());
-		System.out.println("Multiplicación= "+c1.multiplicación(c2).toString());
+		System.out.println("Multiplicación= "+c1.multiplicacion(c2).toString());
 		System.out.println("División= "+c1.division(c2).toString());
 	}
 

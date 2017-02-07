@@ -49,4 +49,21 @@ public class Entrada {
 		System.out.println(msg);
 		return entrada.nextLine().charAt(0);	
 	}
+	public boolean obtenerBooleano(String msg) {
+		boolean loop = true;
+		boolean valor=false;
+		String teclado;
+		
+		do {
+			try {
+				System.out.println(msg);
+				teclado = entrada.nextLine();
+				valor = Boolean.parseBoolean(teclado);
+				loop = false;
+			} catch (Exception e) {
+				System.out.println("El valor introducido debe ser un numero decimal!!!");
+			}
+		} while (loop);
+		return valor;
+	}
 }

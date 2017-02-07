@@ -17,9 +17,9 @@ private boolean inflada;
 	
 	public String toString(){
 		if(this.inflada==true){
-			return "Está inflada";
+			return "Esta inflada";
 		}else{
-			return "Está apagada";
+			return "Esta desinflada";
 		}
 	}
 	
