@@ -39,6 +39,23 @@ public class Entrada {
 		} while (loop);
 		return valor;
 	}
+	public long obtenerLong(String msg) {
+		boolean loop = true;
+		long valor=0;
+		String teclado;
+		
+		do {
+			try {
+				System.out.println(msg);
+				teclado = entrada.nextLine();
+				valor = Long.parseLong(teclado);
+				loop = false;
+			} catch (Exception e) {
+				System.out.println("El valor introducido debe ser un numero decimal!!!");
+			}
+		} while (loop);
+		return valor;
+	}
 
 	public String obtenerString(String msg) {
 		System.out.println(msg);

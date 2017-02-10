@@ -7,7 +7,7 @@ public class testCafetera {
 			Entrada entrada = new Entrada();
 			Cafetera cafetera = new Cafetera();
 			boolean loop=true;
-			int a=0,r=1;
+			int r=1;
 			
 			while(loop){
 				System.out.printf(
@@ -18,7 +18,7 @@ public class testCafetera {
 						+"\n(5)Agregar café a la cafetera"
 						+"\n(0)SALIR");
 				
-				System.out.println(cafetera.toString());
+				
 				
 				r=entrada.obtenerEntero("");
 				
@@ -27,7 +27,7 @@ public class testCafetera {
 						cafetera.servirTaza(entrada.obtenerEntero("¿De cuanto es la taza(ml)?"));
 					break;
 					case 2:
-						cafetera.toString();
+						System.out.println(cafetera.toString());
 					break;
 					case 3:
 						System.out.println("Llenando cafetera...");

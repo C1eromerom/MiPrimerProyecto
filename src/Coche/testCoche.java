@@ -8,7 +8,7 @@ public class testCoche {
 		Coche coche = new Coche();
 		
 		boolean loop=true;
-		int a=0,respuesta;
+		int respuesta;
 		boolean decision;
 		
 		while(loop==true){

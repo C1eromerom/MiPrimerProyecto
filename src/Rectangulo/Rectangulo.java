@@ -20,8 +20,8 @@ public class Rectangulo {
 	public Rectangulo(int altura, int base){
 		this.verticeInferiorIzquierdo = new Complejo(0,0);
 		this.verticeInferiorDerecho = new Complejo(base,0);
-		this.verticeSuperiorIzquierdo = new Complejo(altura,base);
-		this.verticeSuperiorDerecho = new Complejo(0,altura);
+		this.verticeSuperiorIzquierdo = new Complejo(0,altura);
+		this.verticeSuperiorDerecho = new Complejo(altura,base);
 	}
 	
 	public double area(){
