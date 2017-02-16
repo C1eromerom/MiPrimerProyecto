@@ -1,6 +1,5 @@
 package Empleado;
 
-import Coche.Coche;
 import miLibreria.Entrada;
 
 public class testEmpleado {
